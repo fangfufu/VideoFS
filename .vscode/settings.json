@@ -1,0 +1,7 @@
+{
+    "C_Cpp.dimInactiveRegions": false,
+    "files.associations": {
+        "byteblock_2bit.h": "c",
+        "stdint.h": "c"
+    }
+}

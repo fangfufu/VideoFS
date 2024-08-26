@@ -4,8 +4,8 @@
  * @copyright Copyright (c) 2023
  */
 
-#include "util.h"
-#include "log.h"
+#include "util.hpp"
+#include "log.hpp"
 
 #include <errno.h>
 #include <execinfo.h>
@@ -75,7 +75,7 @@ void exit_failure(void)
     void *buffer[BT_BUF_SIZE];
 
     nptrs = backtrace(buffer, BT_BUF_SIZE);
-    fprintf(stderr, "\nOops! HTTPDirFS crashed! :(\n");
+    fprintf(stderr, "\nOops! VideoFS crashed! :(\n");
     fprintf(stderr, "backtrace() returned the following %d addresses:\n",
             nptrs);
     backtrace_symbols_fd(buffer, nptrs, STDERR_FILENO);

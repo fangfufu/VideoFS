@@ -10,12 +10,17 @@ typedef enum {
     warning = 1 << 2,
     info = 1 << 3,
     debug = 1 << 4,
+    link_lock_debug = 1 << 5,
+    network_lock_debug = 1 << 6,
+    cache_lock_debug = 1 << 7,
+    memcache_debug = 1 << 8,
+    libcurl_debug = 1 << 9,
 } LogType;
 
 /**
  * \brief The default log level
  */
-#define DEFAULT_LOG_LEVEL fatal | error | warning | info | debug
+#define DEFAULT_LOG_LEVEL fatal | error | warning | info
 
 /**
  * \brief Get the log level from the environment.
@@ -34,10 +39,11 @@ void log_printf(LogType type, const char *file, const char *func, int line,
  * \details This macro automatically prints out the filename and line number
  */
 #define lprintf(type, ...) \
-    log_printf(type, __FILE__, __func__, __LINE__, __VA_ARGS__);
-#endif
+    log_printf(type, __FILE__, __func__, __LINE__, __VA_ARGS__)
 
 /**
- * \brief Print the version information for Video
+ * \brief Print the version information for VideoFS
  */
 void print_version();
+
+#endif

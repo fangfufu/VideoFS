@@ -1,1 +1,4 @@
+# Editor related
 .vscode
+*.c~
+*.h~

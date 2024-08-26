@@ -1,5 +1,6 @@
 #ifndef UTIL_H
 #define UTIL_H
+
 /**
  * \file util.h
  * \author Fufu Fang (fangfufu2003@gmail.com)

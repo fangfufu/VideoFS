@@ -7,6 +7,7 @@
 #define FRAME_WIDTH         (VIDEO_WIDTH / MACROBLOCK_SIZE) // 240
 #define FRAME_HEIGHT        (VIDEO_HEIGHT / MACROBLOCK_SIZE) // 135
 
+
 /**
  * \brief The Configuration data structure
  */

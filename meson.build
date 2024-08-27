@@ -26,8 +26,8 @@ fuse_dep = dependency('fuse3')
 
 common_dep = [opencv_dep]
 
-encoder = executable('encoder',
-    [common_srcs, 'src/encoder.cpp'],
+encoder = executable('encoder_test',
+    [common_srcs, 'src/encoder_test.cpp'],
     dependencies : [
         common_dep,
         ],
@@ -36,8 +36,8 @@ encoder = executable('encoder',
     install_dir: get_option('bindir')
 )
 
-decoder = executable('decoder',
-    [common_srcs, 'src/decoder.cpp'],
+decoder = executable('decoder_test',
+    [common_srcs, 'src/decoder_test.cpp'],
     dependencies : [
         common_dep,
         ],

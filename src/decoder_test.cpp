@@ -3,7 +3,7 @@
 
 #include "interconverter_3bpc.hpp"
 
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
     (void)argc;
     (void)argv;
@@ -45,7 +45,7 @@ int main(int argc, char** argv)
             int k = 0;
             for (int i = 22; i < 720; i += 45) {
                 for (int j = 22; j < 720; j += 45) {
-                    cv::Vec3b& pixel = frame.at<cv::Vec3b>(i, j);
+                    cv::Vec3b &pixel = frame.at<cv::Vec3b>(i, j);
                     uint8_t value = pixel_to_byte_3bpc(pixel);
                     printf("%02x, ", value);
                     if (k != value) {

@@ -2,3 +2,4 @@
 .vscode
 *.c~
 *.h~
+*.orig

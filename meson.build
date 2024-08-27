@@ -24,11 +24,12 @@ cpp_args = [
 opencv_dep = dependency('opencv4')
 fuse_dep = dependency('fuse3')
 
+common_dep = [opencv_dep]
+
 encoder = executable('encoder',
     [common_srcs, 'src/encoder.cpp'],
     dependencies : [
-        opencv_dep,
-        fuse_dep
+        common_dep,
         ],
     cpp_args: cpp_args,
     install: true,
@@ -38,8 +39,7 @@ encoder = executable('encoder',
 decoder = executable('decoder',
     [common_srcs, 'src/decoder.cpp'],
     dependencies : [
-        opencv_dep,
-        fuse_dep
+        common_dep,
         ],
     cpp_args: cpp_args,
     install: true,

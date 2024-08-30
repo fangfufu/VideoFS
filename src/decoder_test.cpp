@@ -1,7 +1,7 @@
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
-#include "interconverter_3bpc.hpp"
+#include "frame_encoder/interconverter_3bpc.hpp"
 
 int main(int argc, char **argv)
 {

@@ -12,7 +12,7 @@ common_srcs = [
     'src/config.cpp',
     'src/log.cpp',
     'src/util.cpp',
-    'src/interconverter_3bpc.cpp',
+    'src/FrameEncoder/interconverter_3bpc.cpp',
 ]
 
 cpp_args = [
@@ -27,7 +27,8 @@ fuse_dep = dependency('fuse3')
 common_dep = [opencv_dep]
 
 encoder = executable('encoder_test',
-    [common_srcs, 'src/encoder_test.cpp'],
+    [common_srcs, 
+    'src/encoder_test.cpp'],
     dependencies : [
         common_dep,
         ],
@@ -37,7 +38,8 @@ encoder = executable('encoder_test',
 )
 
 decoder = executable('decoder_test',
-    [common_srcs, 'src/decoder_test.cpp'],
+    [common_srcs,
+    'src/decoder_test.cpp'],
     dependencies : [
         common_dep,
         ],

@@ -9,7 +9,7 @@
 
 int log_level_init()
 {
-    char *env = getenv("VIDEOFS_LOG_LEVEL");
+    char* env = getenv("VIDEOFS_LOG_LEVEL");
     if (env) {
         return atoi(env);
     }
@@ -20,9 +20,8 @@ int log_level_init()
 #endif
 }
 
-void
-log_printf(LogType type, const char *file, const char *func, int line,
-           const char *format, ...)
+void log_printf(LogType type, const char* file, const char* func, int line,
+    const char* format, ...)
 {
     if (type & CONFIG.log_type) {
         switch (type) {
@@ -48,8 +47,8 @@ log_printf(LogType type, const char *file, const char *func, int line,
 
         fprintf(stderr, "%s:%d:", file, line);
 
-print_actual_message: {
-        }
+    print_actual_message : {
+    }
         fprintf(stderr, "%s: ", func);
         va_list args;
         va_start(args, format);

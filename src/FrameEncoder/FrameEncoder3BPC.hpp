@@ -15,9 +15,9 @@
 class FrameEncoder3BPC {
 public:
     FrameEncoder3BPC(const std::string& filename,
-                        int video_width, 
-                        int video_height, 
-                        int fps, 
+                        int video_width,
+                        int video_height,
+                        int fps,
                         int macroblock_size,
                         int frame_repeat);
 
@@ -37,7 +37,7 @@ public:
      * \brief Write data to the frame encoder
      */
     size_t write(const void *ptr, size_t size, size_t nmemb);
-    
+
 
 protected:
     // Protected members and functions here

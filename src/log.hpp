@@ -31,8 +31,8 @@ int log_level_init();
  * \brief Log printf
  * \details This is for printing nice log messages
  */
-void log_printf(LogType type, const char *file, const char *func, int line,
-                const char *format, ...);
+void log_printf(LogType type, const char* file, const char* func, int line,
+    const char* format, ...);
 
 /**
  * \brief Log type printf

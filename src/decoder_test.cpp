@@ -1,7 +1,7 @@
 #include <iostream>
 #include <opencv2/opencv.hpp>
 
-#include "frame_encoder/interconverter_3bpc.hpp"
+#include "frame_encoder/interconverter.hpp"
 
 int main(int argc, char** argv)
 {
@@ -46,7 +46,7 @@ int main(int argc, char** argv)
             for (int i = 22; i < 720; i += 45) {
                 for (int j = 22; j < 720; j += 45) {
                     cv::Vec3b& pixel = frame.at<cv::Vec3b>(i, j);
-                    uint8_t value = pixel_to_byte_3bpc(pixel);
+                    uint8_t value = pixel_to_byte(pixel);
                     printf("%02x, ", value);
                     if (k != value) {
                         printf("Error: %x, %x\n", k, value);

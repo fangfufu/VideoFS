@@ -1,12 +1,12 @@
 /**
- * \file VideoWriter3BPC.cpp
- * \brief VideoWriter3BPC class implementation
+ * \file VideoWriter.cpp
+ * \brief VideoWriter class implementation
  * \author 2024 Fufu Fang
  * \copyright SPDX-License-Identifier:  GPL-3.0-or-later
  */
-#include "VideoWriter3BPC.hpp"
+#include "VideoWriter.hpp"
 
-VideoWriter3BPC::VideoWriter3BPC(const std::string& filename,
+VideoWriter::VideoWriter(const std::string& filename,
                     int video_width,
                     int video_height,
                     int fps,
@@ -31,7 +31,7 @@ VideoWriter3BPC::VideoWriter3BPC(const std::string& filename,
         }
 }
 
-VideoWriter3BPC::~VideoWriter3BPC() {
+VideoWriter::~VideoWriter() {
         if (video_writer.isOpened()) {
             video_writer.release();
         }

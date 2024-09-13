@@ -12,7 +12,7 @@ common_srcs = [
     'src/config.cpp',
     'src/log.cpp',
     'src/util.cpp',
-    'src/FrameEncoder/interconverter_3bpc.cpp',
+    'src/FrameEncoder/interconverter.cpp',
 ]
 
 cpp_args = [

@@ -1,8 +1,8 @@
-#ifndef VideoWriter3BPC_HPP
-#define VideoWriter3BPC_HPP
+#ifndef VideoWriter_HPP
+#define VideoWriter_HPP
 
 /**
- * \file VideoWriter3BPC.hpp
+ * \file VideoWriter.hpp
  * \author 2024 Fufu Fang
  * \copyright SPDX-License-Identifier:  GPL-3.0-or-later
  */
@@ -12,16 +12,16 @@
 #include <opencv2/core.hpp>
 #include <opencv2/videoio.hpp>
 
-class VideoWriter3BPC {
+class VideoWriter {
 public:
-    VideoWriter3BPC(const std::string& filename,
+    VideoWriter(const std::string& filename,
                         int video_width,
                         int video_height,
                         int fps,
                         int macroblock_size,
                         int frame_repeat);
 
-    ~VideoWriter3BPC();
+    ~VideoWriter();
 
     const std::string filename;
     const unsigned int video_width;

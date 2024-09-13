@@ -1,11 +1,12 @@
 /**
- * \file FrameEncoder3BPC.cpp
- * \brief FrameEncoder3BPC class implementation
+ * \file VideoWriter3BPC.cpp
+ * \brief VideoWriter3BPC class implementation
+ * \author 2024 Fufu Fang
+ * \copyright SPDX-License-Identifier:  GPL-3.0-or-later
  */
-#include "FrameEncoder3BPC.hpp"
+#include "VideoWriter3BPC.hpp"
 
-
-FrameEncoder3BPC::FrameEncoder3BPC(const std::string& filename,
+VideoWriter3BPC::VideoWriter3BPC(const std::string& filename,
                     int video_width,
                     int video_height,
                     int fps,
@@ -30,7 +31,7 @@ FrameEncoder3BPC::FrameEncoder3BPC(const std::string& filename,
         }
 }
 
-FrameEncoder3BPC::~FrameEncoder3BPC() {
+VideoWriter3BPC::~VideoWriter3BPC() {
         if (video_writer.isOpened()) {
             video_writer.release();
         }

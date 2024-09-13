@@ -1,8 +1,10 @@
 #ifndef INTERCONVERTER_3BPC_H
 #define INTERCONVERTER_3BPC_H
 /**
- * \file interconverter_3bpc.hpp
+ * \file InterConverter3BPC.hpp
  * \brief Byte / Pixel Converter, 3 byte per chanel
+ * \author 2024 Fufu Fang
+ * \copyright SPDX-License-Identifier:  GPL-3.0-or-later
  */
 
 #include <cstdint>

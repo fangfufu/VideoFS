@@ -1,4 +1,11 @@
-#include "interconverter_3bpc.hpp"
+/**
+ * \file InterConverter3BPC.cpp
+ * \brief Byte / Pixel Converter, 3 byte per chanel
+ * \author 2024 Fufu Fang
+ * \copyright SPDX-License-Identifier:  GPL-3.0-or-later
+ */
+
+#include "InterConverter3BPC.hpp"
 
 #define BRIGHTNESS_BIAS     0b00001000
 #define VALID_BIT_MASK      0b11100000
